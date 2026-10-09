@@ -50,8 +50,9 @@ hr{border:0;border-top:1px solid var(--k);margin:44px 0}
 <div class="kutu">
 <strong>Özet.</strong> Ruh hâli kayıtlarınız, BDT (bilişsel davranışçı terapi) çalışmalarınız,
 koç görüşmeleriniz ve sesiniz <strong>cihazınızdan çıkmaz</strong>. Sunucumuzda yalnızca
-hesabınız, satın alımınız ve içerik taşımayan kullanım olayları tutulur. Reklam yok,
-izleme yok, çökme raporu toplayan bir bileşen yok.
+hesabınız, satın alımınız, rastgele bir kurulum kimliği ve içerik taşımayan kullanım olayları
+tutulur. Ücretsiz sürümde Google AdMob üzerinden <strong>kişiselleştirilmemiş</strong> reklam
+gösterilir; sizi uygulamalar arasında izlemiyoruz. Premium'da reklam yoktur.
 </div>
 
 <h2>1. Sunucuya giden veriler</h2>
@@ -62,6 +63,7 @@ izleme yok, çökme raporu toplayan bir bileşen yok.
 <tr><td>Hesap kimliği (rastgele UUID)</td><td>Hesabınızı ve aboneliğinizi eşlemek</td><td>Supabase</td></tr>
 <tr><td>Satın alma kaydı</td><td>Abonelik hakkınızı doğrulamak, muhasebe</td><td>Supabase · Apple · Google</td></tr>
 <tr><td>Kullanım olayları</td><td>Hangi ekranın kullanıldığını ölçmek</td><td>Supabase</td></tr>
+<tr><td>Kurulum kaydı (rastgele kimlik, platform, sürüm, işletim sistemi sürümü, telefon/tablet)</td><td>Kaç ayrı kurulumun uygulamayı kullandığını saymak</td><td>Supabase</td></tr>
 </table>
 <p>Kullanım olayları <strong>kapalı bir listeden</strong> gelir ve özellikleri yalnızca
 <strong>sayı veya doğru/yanlış</strong> olabilir. Yazdığınız hiçbir metin bu olaylara giremez;
@@ -91,14 +93,15 @@ Bu aktarım öncesinde uygulama içinde ayrıca onayınız istenir; onay vermezs
 <tr><td>Apple · Google</td><td>Giriş (Sign in with Apple / Google)</td></tr>
 <tr><td>App Store · Google Play</td><td>Ödeme ve abonelik yönetimi</td></tr>
 <tr><td>Google Gemini</td><td>Yalnızca uyku hikâyesi metni üretimi (yukarıdaki sınırlarla)</td></tr>
+<tr><td>Google AdMob</td><td>Ücretsiz sürümde reklam gösterimi. Google'ın reklam yazılımı IP adresinizi (yaklaşık bölge çıkarımı), cihaz bilgisini, reklam etkileşimlerini ve tanılama verisini işler. Yazdıklarınız ve ruh hâli kayıtlarınız paylaşılmaz.</td></tr>
 </table>
 
 <h2>5. Yapmadıklarımız</h2>
 <ul>
-<li>Reklam göstermiyoruz ve reklam kimliği (IDFA) kullanmıyoruz.</li>
+<li>Reklamları ilgi alanınıza göre <strong>kişiselleştirmiyoruz</strong>; izleme izni istemiyoruz. Kriz, koç, günlük, düşünce kaydı ve uyku ekranlarında reklam göstermiyoruz.</li>
 <li>Sizi uygulamalar veya siteler arasında <strong>izlemiyoruz</strong>.</li>
 <li>Verilerinizi satmıyoruz.</li>
-<li>Çökme raporu, konum, rehber, fotoğraf veya sağlık verisi toplamıyoruz.</li>
+<li>Kendi sunucumuzda çökme raporu, konum, rehber, fotoğraf veya sağlık verisi toplamıyoruz.</li>
 <li>Bildirim jetonu (push token) toplamıyoruz.</li>
 </ul>
 
@@ -133,7 +136,9 @@ sağlığı uzmanının yerine geçmez. Acil bir durumda 112'yi arayın.
 <div class="kutu">
 <strong>Summary.</strong> Your mood entries, CBT work, coach conversations and your voice
 <strong>never leave your device</strong>. Our server holds only your account, your purchase
-and content-free usage events. No ads, no tracking, no crash-reporting component.
+a random install identifier and content-free usage events. The free version shows
+<strong>non-personalised</strong> ads through Google AdMob; we do not track you across apps.
+Premium has no ads.
 </div>
 
 <h2>1. Data sent to our server</h2>
@@ -144,6 +149,7 @@ and content-free usage events. No ads, no tracking, no crash-reporting component
 <tr><td>Account ID (random UUID)</td><td>Linking your account and subscription</td><td>Supabase</td></tr>
 <tr><td>Purchase record</td><td>Verifying entitlement, accounting</td><td>Supabase · Apple · Google</td></tr>
 <tr><td>Usage events</td><td>Measuring which screens are used</td><td>Supabase</td></tr>
+<tr><td>Install record (random identifier, platform, version, OS version, phone/tablet)</td><td>Counting how many separate installs use the app</td><td>Supabase</td></tr>
 </table>
 <p>Usage events come from a <strong>closed list</strong> and their properties can only be
 <strong>numbers or true/false</strong>. No text you write can enter these events; this is
@@ -175,14 +181,15 @@ your consent before this transfer; without consent no request is made.</p>
 <tr><td>Apple · Google</td><td>Sign in with Apple / Google</td></tr>
 <tr><td>App Store · Google Play</td><td>Payments and subscription management</td></tr>
 <tr><td>Google Gemini</td><td>Sleep-story text generation only, within the limits above</td></tr>
+<tr><td>Google AdMob</td><td>Showing ads in the free version. Google's advertising software processes your IP address (to estimate a general region), device information, ad interactions and diagnostic data. What you write and your mood entries are not shared.</td></tr>
 </table>
 
 <h2>5. What we do not do</h2>
 <ul>
-<li>We show no ads and use no advertising identifier (IDFA).</li>
+<li>We do <strong>not personalise</strong> ads by interest and do not ask for tracking permission. We show no ads on the crisis, coach, journal, thought record and sleep screens.</li>
 <li>We do <strong>not track</strong> you across apps or websites.</li>
 <li>We do not sell your data.</li>
-<li>We collect no crash reports, location, contacts, photos or health data.</li>
+<li>On our own server we collect no crash reports, location, contacts, photos or health data.</li>
 <li>We collect no push notification token.</li>
 </ul>
 
@@ -210,7 +217,7 @@ and does not replace a mental health professional. In an emergency call your loc
 
 <footer>
   BUSATER YAZILIM A.Ş. · Auberis<br>
-  Son güncelleme / Last updated: 07-09-2026
+  Son güncelleme / Last updated: 09-10-2026
 </footer>
 </div>
 </body>
